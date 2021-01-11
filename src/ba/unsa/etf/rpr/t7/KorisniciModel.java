@@ -13,7 +13,7 @@ public class KorisniciModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
     private Connection conn;
-    private PreparedStatement dajKorisnike;
+    private PreparedStatement dajKorisnike, izmijeniKorisnika;
 
     public KorisniciModel() {
         try{
@@ -30,6 +30,11 @@ public class KorisniciModel {
             } catch (SQLException e1){
                 e1.printStackTrace();
             }
+        }
+        try{
+            izmijeniKorisnika = conn.prepareStatement("UPDATE korisnik SET ime=?, prezime=?, email=?, username=?, password=? WHERE id=?");
+        } catch (SQLException e){
+            e.printStackTrace();
         }
 
     }
@@ -66,6 +71,7 @@ public class KorisniciModel {
         korisnici.add(new Korisnik("Tarik", "Sijerčić", "tsijercic1@etf.unsa.ba", "tariks", "test"));
         korisnici.add(new Korisnik("Rijad", "Fejzić", "rfejzic1@etf.unsa.ba", "rijadf", "test"));
         trenutniKorisnik.set(null);*/
+        korisnici.clear();
         try {
             ResultSet rs = dajKorisnike.executeQuery();
             while (rs.next()) {
@@ -122,5 +128,19 @@ public class KorisniciModel {
 
     public void setTrenutniKorisnik(int i) {
         this.trenutniKorisnik.set(korisnici.get(i));
+    }
+
+    public void izmijeniKorisnika(Korisnik k){
+        try{
+            izmijeniKorisnika.setString(1, k.getIme());
+            izmijeniKorisnika.setString(2, k.getPrezime());
+            izmijeniKorisnika.setString(3, k.getEmail());
+            izmijeniKorisnika.setString(4, k.getUsername());
+            izmijeniKorisnika.setString(5, k.getPassword());
+            izmijeniKorisnika.setInt(6, k.getId());
+            izmijeniKorisnika.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 }
