@@ -4,11 +4,56 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.sql.*;
+import java.util.Scanner;
+
 public class KorisniciModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
+    private Connection conn;
+    private PreparedStatement dajKorisnikaId;
 
     public KorisniciModel() {
+        try{
+            conn = DriverManager.getConnection("jdbc:sqlite:korisnici.db");
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        try{
+           dajKorisnikaId = conn.prepareStatement("SELECT * FROM korisnik WHERE id=?");
+        } catch (SQLException e){
+            regenerisiBazu();
+            try{
+                dajKorisnikaId = conn.prepareStatement("SELECT * FROM korisnik WHERE id=?");
+            } catch (SQLException e1){
+                e1.printStackTrace();
+            }
+        }
+
+    }
+    private void regenerisiBazu() {
+        Scanner ulaz = null;
+        try {
+            ulaz = new Scanner(new FileInputStream("korisnici.db.sql"));
+            String sqlUpit = "";
+            while (ulaz.hasNext()) {
+                sqlUpit += ulaz.nextLine();
+                if ( sqlUpit.length() > 1 && sqlUpit.charAt( sqlUpit.length()-1 ) == ';') {
+                    try {
+                        Statement stmt = conn.createStatement();
+                        stmt.execute(sqlUpit);
+                        sqlUpit = "";
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            ulaz.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("Ne postoji SQL datoteka… nastavljam sa praznom bazom");
+        }
     }
 
     public void napuni() {
