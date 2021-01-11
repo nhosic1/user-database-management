@@ -13,7 +13,7 @@ public class KorisniciModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
     private Connection conn;
-    private PreparedStatement dajKorisnikaId;
+    private PreparedStatement dajKorisnike;
 
     public KorisniciModel() {
         try{
@@ -22,11 +22,11 @@ public class KorisniciModel {
             e.printStackTrace();
         }
         try{
-           dajKorisnikaId = conn.prepareStatement("SELECT * FROM korisnik WHERE id=?");
+           dajKorisnike = conn.prepareStatement("SELECT * FROM korisnik");
         } catch (SQLException e){
             regenerisiBazu();
             try{
-                dajKorisnikaId = conn.prepareStatement("SELECT * FROM korisnik WHERE id=?");
+                dajKorisnike = conn.prepareStatement("SELECT * FROM korisnik");
             } catch (SQLException e1){
                 e1.printStackTrace();
             }
@@ -59,13 +59,24 @@ public class KorisniciModel {
     public void napuni() {
         // Ako je lista već bila napunjena, praznimo je
         // Na taj način se metoda napuni() može pozivati više puta u testovima
-        korisnici.clear();
+        /*korisnici.clear();
 
         korisnici.add(new Korisnik("Vedran", "Ljubović", "vljubovic@etf.unsa.ba", "vedranlj", "test"));
         korisnici.add(new Korisnik("Amra", "Delić", "adelic@etf.unsa.ba", "amrad", "test"));
         korisnici.add(new Korisnik("Tarik", "Sijerčić", "tsijercic1@etf.unsa.ba", "tariks", "test"));
         korisnici.add(new Korisnik("Rijad", "Fejzić", "rfejzic1@etf.unsa.ba", "rijadf", "test"));
-        trenutniKorisnik.set(null);
+        trenutniKorisnik.set(null);*/
+        try {
+            ResultSet rs = dajKorisnike.executeQuery();
+            while (rs.next()) {
+                Korisnik k = new Korisnik(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+                korisnici.add(k);
+                if (trenutniKorisnik == null) trenutniKorisnik = new SimpleObjectProperty<>(k);
+            }
+        } catch(SQLException e) {
+            System.out.println("Neuspješno čitanje iz baze: " + e.getMessage());
+        }
+        if (trenutniKorisnik == null) trenutniKorisnik = new SimpleObjectProperty<>();
     }
 
     public void vratiNaDefault(){
