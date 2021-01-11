@@ -68,13 +68,17 @@ public class KorisniciModel {
         trenutniKorisnik.set(null);
     }
 
-    public void vratiNaDefault() throws SQLException{
+    public void vratiNaDefault(){
         // Dodali smo metodu vratiNaDefault koja trenutno ne radi ništa, a kada prebacite Model na DAO onda
         // implementirajte ovu metodu
         // Razlog za ovo je da polazni testovi ne bi padali nakon što dodate bazu
-        Statement stmt = conn.createStatement();
-        stmt.executeUpdate("DELETE FROM korisnik");
-        regenerisiBazu();
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.executeUpdate("DELETE FROM korisnik");
+            regenerisiBazu();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     public void diskonektuj() {
