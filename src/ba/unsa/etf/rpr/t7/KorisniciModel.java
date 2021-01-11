@@ -71,7 +71,7 @@ public class KorisniciModel {
         korisnici.add(new Korisnik("Tarik", "Sijerčić", "tsijercic1@etf.unsa.ba", "tariks", "test"));
         korisnici.add(new Korisnik("Rijad", "Fejzić", "rfejzic1@etf.unsa.ba", "rijadf", "test"));
         trenutniKorisnik.set(null);*/
-        korisnici.clear();
+        //korisnici.clear();
         try {
             ResultSet rs = dajKorisnike.executeQuery();
             while (rs.next()) {
@@ -123,6 +123,7 @@ public class KorisniciModel {
     }
 
     public void setTrenutniKorisnik(Korisnik trenutniKorisnik) {
+        if(getTrenutniKorisnik() != null) izmijeniKorisnika(getTrenutniKorisnik());
         this.trenutniKorisnik.set(trenutniKorisnik);
     }
 

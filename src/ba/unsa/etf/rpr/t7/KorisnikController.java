@@ -24,6 +24,7 @@ public class KorisnikController {
     public void initialize() {
         listKorisnici.setItems(model.getKorisnici());
         listKorisnici.getSelectionModel().selectedItemProperty().addListener((obs, oldKorisnik, newKorisnik) -> {
+            if(oldKorisnik != null) model.izmijeniKorisnika(oldKorisnik);
             model.setTrenutniKorisnik(newKorisnik);
             listKorisnici.refresh();
          });
@@ -35,7 +36,6 @@ public class KorisnikController {
                 fldEmail.textProperty().unbindBidirectional(oldKorisnik.emailProperty() );
                 fldUsername.textProperty().unbindBidirectional(oldKorisnik.usernameProperty() );
                 fldPassword.textProperty().unbindBidirectional(oldKorisnik.passwordProperty() );
-                model.izmijeniKorisnika(oldKorisnik);
             }
             if (newKorisnik == null) {
                 fldIme.setText("");
