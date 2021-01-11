@@ -13,7 +13,7 @@ public class KorisniciModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
     private Connection conn;
-    private PreparedStatement dajKorisnike, izmijeniKorisnika;
+    private PreparedStatement dajKorisnike, izmijeniKorisnika, obrisiKorisnikaId;
 
     public KorisniciModel() {
         try{
@@ -33,6 +33,7 @@ public class KorisniciModel {
         }
         try{
             izmijeniKorisnika = conn.prepareStatement("UPDATE korisnik SET ime=?, prezime=?, email=?, username=?, password=? WHERE id=?");
+            obrisiKorisnikaId = conn.prepareStatement("DELETE FROM korisnik WHERE id=?");
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -140,6 +141,14 @@ public class KorisniciModel {
             izmijeniKorisnika.setString(5, k.getPassword());
             izmijeniKorisnika.setInt(6, k.getId());
             izmijeniKorisnika.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+    public void obrisiKorisnika(int id){
+        try {
+            obrisiKorisnikaId.setInt(1, id);
+            obrisiKorisnikaId.executeUpdate();
         } catch (SQLException e){
             e.printStackTrace();
         }

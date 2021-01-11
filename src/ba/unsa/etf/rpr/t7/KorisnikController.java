@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.t7;
 
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
@@ -111,5 +112,12 @@ public class KorisnikController {
 
     public void krajAction(ActionEvent actionEvent) {
         System.exit(0);
+    }
+    public void obrisiAction(ActionEvent actionEvent){
+        if(model.getTrenutniKorisnik() != null){
+            model.obrisiKorisnika(model.getTrenutniKorisnik().getId());
+            listKorisnici.getItems().remove(model.getTrenutniKorisnik());
+            listKorisnici.getSelectionModel().select(0);
+        }
     }
 }
