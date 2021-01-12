@@ -10,6 +10,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import net.sf.jasperreports.engine.JRException;
 
 import java.io.File;
 
@@ -145,5 +146,12 @@ public class KorisnikController {
         Stage stage = (Stage) fldIme.getScene().getWindow();
         file = chooser.showOpenDialog(stage);
         model.zapisiDatoteku(file);
+    }
+    public void print(ActionEvent actionEvent){
+        try {
+            new PrintReport().showReport(model.getConn());
+        } catch (JRException e1) {
+            e1.printStackTrace();
+        }
     }
 }
