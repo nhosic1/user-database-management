@@ -174,6 +174,8 @@ public class KorisniciModel {
                 izlaz.close();
             }
         }
-
+    }
+    public Connection getConn(){
+        return conn;
     }
 }
