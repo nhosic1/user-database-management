@@ -3,9 +3,11 @@ package ba.unsa.etf.rpr.t7;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 public class KorisnikController {
     public TextField fldIme;
@@ -119,5 +121,8 @@ public class KorisnikController {
             listKorisnici.getItems().remove(model.getTrenutniKorisnik());
             listKorisnici.getSelectionModel().select(0);
         }
+    }
+    public void exit(ActionEvent actionEvent){
+        System.exit(0);
     }
 }
