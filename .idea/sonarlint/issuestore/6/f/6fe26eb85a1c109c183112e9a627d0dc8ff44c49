@@ -1,0 +1,19 @@
+
+P
+java:S11412"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+7
+java:S16430"Use a StringBuilder instead.(¥…ˆÇþÿÿÿÿ
+Q	java:S125D"<This block of commented-out lines of code should be removed.(÷ñÇ¨
+Q	java:S125K"<This block of commented-out lines of code should be removed.(‚¼½ù
+N	java:S106="9Replace this use of System.out or System.err by a logger.(Éé©ý
+?
+java:S2115")Add password protection to this database.(¶Ôõ
+b
+java:S2095^"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+Q
+java:S1659"/Declare "obrisiKorisnikaId" on a separate line.(±®ËÈùÿÿÿÿ8ŽžÜ˜ï.
+b
+java:S20953"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+N	java:S106T"9Replace this use of System.out or System.err by a logger.(×œ š
+J
+java:S1659"/Declare "izmijeniKorisnika" on a separate line.(±®ËÈùÿÿÿÿ
