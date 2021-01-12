@@ -1,10 +1,8 @@
 package ba.unsa.etf.rpr.t7;
 
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
@@ -145,6 +143,7 @@ public class KorisnikController {
         FileChooser chooser = new FileChooser();
         chooser.setTitle("Save");
         Stage stage = (Stage) fldIme.getScene().getWindow();
-        file = chooser.showSaveDialog(stage);
+        file = chooser.showOpenDialog(stage);
+        model.zapisiDatoteku(file);
     }
 }

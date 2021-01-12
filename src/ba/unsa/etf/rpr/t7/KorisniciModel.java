@@ -4,8 +4,7 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.sql.*;
 import java.util.Scanner;
 
@@ -152,5 +151,29 @@ public class KorisniciModel {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+    public void zapisiDatoteku(File f){
+        PrintWriter izlaz;
+        if (f != null) {
+            try {
+                izlaz = new PrintWriter(new FileWriter(f.getAbsolutePath()));
+
+            } catch (IOException e) {
+                System.out.println("Datoteka se ne može otvoriti");
+                return;
+            }
+
+            try {
+                for (Korisnik k : korisnici) {
+                    izlaz.println(k.getUsername() + ":" + k.getPassword() + ":" + k.getId() + ":" + k.getId() + ":" + k.getIme() + " " + k.getPrezime() + "::");
+                }
+            } catch (Exception e) {
+                System.out.println("Problem pri pisanju podataka.");
+                System.out.println("Greška: " + e);
+            } finally {
+                izlaz.close();
+            }
+        }
+
     }
 }

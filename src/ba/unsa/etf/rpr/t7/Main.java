@@ -14,7 +14,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         KorisniciModel model = new KorisniciModel();
-        //model.vratiNaDefault();
+        model.vratiNaDefault();
         model.napuni();
         KorisnikController ctrl = new KorisnikController(model);
 
