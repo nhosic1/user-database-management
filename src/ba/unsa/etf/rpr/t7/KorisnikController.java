@@ -3,11 +3,16 @@ package ba.unsa.etf.rpr.t7;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
 public class KorisnikController {
     public TextField fldIme;
@@ -124,5 +129,12 @@ public class KorisnikController {
     }
     public void exit(ActionEvent actionEvent){
         System.exit(0);
+    }
+    public void about(ActionEvent actionEvent) throws Exception{
+        Stage newStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/about.fxml"));
+        newStage.setTitle("About");
+        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        newStage.show();
     }
 }

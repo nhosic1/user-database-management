@@ -29,7 +29,7 @@
             <MenuItem text="E_xit" onAction="#exit"/>
          </Menu>
          <Menu text="_Help">
-            <MenuItem text="_About"/>
+            <MenuItem text="_About" onAction="#about"/>
          </Menu>
       </MenuBar>
    </top>
