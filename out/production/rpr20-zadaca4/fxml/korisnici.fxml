@@ -20,7 +20,7 @@
    <top>
       <MenuBar>
          <Menu text="_File" >
-            <MenuItem text="_Save"/>
+            <MenuItem text="_Save" onAction="#save"/>
             <MenuItem text="_Print"/>
             <Menu text="_Language">
                <MenuItem text="_Bosanski"/>

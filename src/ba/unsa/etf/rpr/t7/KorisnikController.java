@@ -137,4 +137,11 @@ public class KorisnikController {
         newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         newStage.show();
     }
+    public void save(ActionEvent actionEvent) throws Exception{
+        Stage newStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/save.fxml"));
+        newStage.setTitle("Save");
+        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        newStage.show();
+    }
 }
