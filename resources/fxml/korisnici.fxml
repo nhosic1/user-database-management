@@ -19,17 +19,17 @@
 <BorderPane>
    <top>
       <MenuBar>
-         <Menu text="File">
-            <MenuItem text="Save"/>
-            <MenuItem text="Print"/>
-            <Menu text="Language">
-               <MenuItem text="Bosanski"/>
-               <MenuItem text="English"/>
+         <Menu text="_File" >
+            <MenuItem text="_Save"/>
+            <MenuItem text="_Print"/>
+            <Menu text="_Language">
+               <MenuItem text="_Bosanski"/>
+               <MenuItem text="_English"/>
             </Menu>
-            <MenuItem text="Exit" onAction="#exit"/>
+            <MenuItem text="E_xit" onAction="#exit"/>
          </Menu>
-         <Menu text="Help">
-            <MenuItem text="About"/>
+         <Menu text="_Help">
+            <MenuItem text="_About"/>
          </Menu>
       </MenuBar>
    </top>
