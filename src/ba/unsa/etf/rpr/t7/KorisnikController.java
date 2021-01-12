@@ -10,7 +10,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.File;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
@@ -138,10 +141,10 @@ public class KorisnikController {
         newStage.show();
     }
     public void save(ActionEvent actionEvent) throws Exception{
-        Stage newStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/save.fxml"));
-        newStage.setTitle("Save");
-        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        newStage.show();
+        File file;
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Save");
+        Stage stage = (Stage) fldIme.getScene().getWindow();
+        file = chooser.showSaveDialog(stage);
     }
 }
