@@ -17,3 +17,11 @@ Y
 )test/ba/unsa/etf/rpr/t7/Zadatak2Test.java,0/8/08187ce2036a1cc3e21696cfb21df490916a884d
 P
  src/ba/unsa/etf/rpr/t7/Main.java,8/2/8212520534a72699eea2cdb9d1ae44f5525ab33e
+\
+,out/production/rpr20-zadaca4/fxml/about.fxml,f/5/f50c972449f79edaaf5c04413ac71caa5d47883f
+I
+resources/fxml/about.fxml,d/5/d59141e7f9bca26d3335ee3cc0e74f97534161bc
+8
+test.txt,4/b/4b6fcb2d521ef0fd442a5301e7932d16cc9f375a
+Y
+)test/ba/unsa/etf/rpr/t7/Zadatak4Test.java,d/c/dcc22ceee68b9618cf58bcc0be6acd797ede4a7f

@@ -1,19 +1,22 @@
 
-P
-java:S11412"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q	java:S125C"<This block of commented-out lines of code should be removed.(÷ñÇ¨
+V	java:S106¢"9Replace this use of System.out or System.err by a logger.(´Š¹8ŸÑı³ï.
+[	java:S106«"9Replace this use of System.out or System.err by a logger.(¼‹Æòûÿÿÿÿ8ŸÑı³ï.
+V	java:S106¬"9Replace this use of System.out or System.err by a logger.(¹ò¾ã8ŸÑı³ï.
+b
+java:S20952"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
 7
-java:S16430"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ
-Q	java:S125D"<This block of commented-out lines of code should be removed.(÷ñÇ¨
-Q	java:S125K"<This block of commented-out lines of code should be removed.(‚¼½ù
-N	java:S106="9Replace this use of System.out or System.err by a logger.(Éé©ı
-?
-java:S2115")Add password protection to this database.(¶Ôõ
+java:S1643/"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ
 b
-java:S2095^"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
-Q
-java:S1659"/Declare "obrisiKorisnikaId" on a separate line.(±®ËÈùÿÿÿÿ8Ü˜ï.
-b
-java:S20953"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
-N	java:S106T"9Replace this use of System.out or System.err by a logger.(×œ š
+java:S2095]"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+N	java:S106S"9Replace this use of System.out or System.err by a logger.(×œ š
+Q	java:S125J"<This block of commented-out lines of code should be removed.(‚¼½ù
+P
+java:S11411"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
 J
-java:S1659"/Declare "izmijeniKorisnika" on a separate line.(±®ËÈùÿÿÿÿ
+java:S1659"/Declare "izmijeniKorisnika" on a separate line.(±®ËÈùÿÿÿÿ
+Q
+java:S1659"/Declare "obrisiKorisnikaId" on a separate line.(±®ËÈùÿÿÿÿ8Ü˜ï.
+?
+java:S2115")Add password protection to this database.(¶Ôõ
+N	java:S106<"9Replace this use of System.out or System.err by a logger.(Éé©ı
