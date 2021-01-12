@@ -14,7 +14,7 @@
         <Insets top="20" left="20" right="20" bottom="20"/>
     </padding>
     <Button text="Odaberi datoteku" GridPane.columnSpan="2" onAction="#odaberiDatoteku"/>
-    <Label text="Datoteka: " GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+    <Label fx:id="datotekaLabel" text="Datoteka: " GridPane.rowIndex="1" GridPane.columnSpan="2"/>
     <Button text="Save" GridPane.rowIndex="2"/>
     <Button text="Cancel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
 </GridPane>
