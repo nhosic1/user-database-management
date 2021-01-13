@@ -115,7 +115,9 @@ public class KorisnikController {
     }
 
     public void dodajAction(ActionEvent actionEvent) {
-        model.getKorisnici().add(new Korisnik("", "", "", "", ""));
+        Korisnik noviKorisnik = new Korisnik(model.dajNoviIdKorisnika(),"", "", "", "", "");
+        model.getKorisnici().add(noviKorisnik);
+        model.dodajKorisnika(noviKorisnik);
         listKorisnici.getSelectionModel().selectLast();
     }
 

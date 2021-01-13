@@ -1,8 +1,8 @@
 <component name="libraryTable">
-  <library name="net.sf.jasperreports:jasperreports:6.12.0" type="repository">
-    <properties maven-id="net.sf.jasperreports:jasperreports:6.12.0" />
+  <library name="net.sf.jasperreports:jasperreports:6.11.0" type="repository">
+    <properties maven-id="net.sf.jasperreports:jasperreports:6.11.0" />
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/net/sf/jasperreports/jasperreports/6.12.0/jasperreports-6.12.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/net/sf/jasperreports/jasperreports/6.11.0/jasperreports-6.11.0.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/commons-beanutils/commons-beanutils/1.9.4/commons-beanutils-1.9.4.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar!/" />
       <root url="jar://$MAVEN_REPOSITORY$/commons-digester/commons-digester/2.1/commons-digester-2.1.jar!/" />

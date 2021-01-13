@@ -21,7 +21,7 @@
       <MenuBar>
          <Menu text="_File" >
             <MenuItem text="_Save" onAction="#save"/>
-            <MenuItem text="_Print"/>
+            <MenuItem text="_Print" onAction="#print"/>
             <Menu text="_Language">
                <MenuItem text="_Bosanski"/>
                <MenuItem text="_English"/>

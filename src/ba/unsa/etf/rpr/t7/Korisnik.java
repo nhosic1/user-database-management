@@ -13,6 +13,7 @@ public class Korisnik {
         this.email = new SimpleStringProperty(email);
         this.username = new SimpleStringProperty(username);
         this.password = new SimpleStringProperty(password);
+        this.id = new SimpleIntegerProperty(0);
     }
     public Korisnik(int id, String ime, String prezime, String email, String username, String password) {
         this.id = new SimpleIntegerProperty(id);

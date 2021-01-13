@@ -25,3 +25,7 @@ I
 test.txt,4/b/4b6fcb2d521ef0fd442a5301e7932d16cc9f375a
 Y
 )test/ba/unsa/etf/rpr/t7/Zadatak4Test.java,d/c/dcc22ceee68b9618cf58bcc0be6acd797ede4a7f
+A
+rpr20-zadaca4.iml,2/6/26554f83a6d2d6ac1ac490d6e57019220a5d15a8
+W
+'src/ba/unsa/etf/rpr/t7/PrintReport.java,f/5/f5c2e8449b189a76651b7d63036187e9d48a0445

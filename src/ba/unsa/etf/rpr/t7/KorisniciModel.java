@@ -12,7 +12,7 @@ public class KorisniciModel {
     private ObservableList<Korisnik> korisnici = FXCollections.observableArrayList();
     private SimpleObjectProperty<Korisnik> trenutniKorisnik = new SimpleObjectProperty<>();
     private Connection conn;
-    private PreparedStatement dajKorisnike, izmijeniKorisnika, obrisiKorisnikaId;
+    private PreparedStatement dajKorisnike, izmijeniKorisnika, obrisiKorisnikaId, dajNoviId, dodajKorisnika;
 
     public KorisniciModel() {
         try{
@@ -33,6 +33,8 @@ public class KorisniciModel {
         try{
             izmijeniKorisnika = conn.prepareStatement("UPDATE korisnik SET ime=?, prezime=?, email=?, username=?, password=? WHERE id=?");
             obrisiKorisnikaId = conn.prepareStatement("DELETE FROM korisnik WHERE id=?");
+            dajNoviId = conn.prepareStatement("SELECT MAX(id)+1 FROM korisnik");
+            dodajKorisnika = conn.prepareStatement("INSERT INTO korisnik VALUES(?,?,?,?,?,?)");
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -151,6 +153,31 @@ public class KorisniciModel {
         } catch (SQLException e){
             e.printStackTrace();
         }
+    }
+    public void dodajKorisnika(Korisnik k){
+        try{
+            dodajKorisnika.setInt(1, dajNoviIdKorisnika());
+            dodajKorisnika.setString(2, k.getIme());
+            dodajKorisnika.setString(3, k.getPrezime());
+            dodajKorisnika.setString(4, k.getEmail());
+            dodajKorisnika.setString(5, k.getUsername());
+            dodajKorisnika.setString(6, k.getPassword());
+            dodajKorisnika.executeUpdate();
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+    public int dajNoviIdKorisnika(){
+        int id = 1;
+        try{
+            ResultSet result = dajNoviId.executeQuery();
+            if (result.next()) {
+                id = result.getInt(1);  //ako tabela nije prazna
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return id;
     }
     public void zapisiDatoteku(File f){
         PrintWriter izlaz;
