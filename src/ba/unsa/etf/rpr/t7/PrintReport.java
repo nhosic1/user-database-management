@@ -1,7 +1,5 @@
 package ba.unsa.etf.rpr.t7;
 
-
-
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.swing.JRViewer;
 
@@ -12,7 +10,7 @@ import java.util.HashMap;
 
 public class PrintReport extends JFrame {
     public void showReport(Connection conn) throws JRException {
-        String reportSrcFile = getClass().getResource("/reports/.jrxml").getFile();
+        String reportSrcFile = getClass().getResource("/reports/korisnici.jrxml").getFile();
         String reportsDir = getClass().getResource("/reports/").getFile();
 
         JasperReport jasperReport = JasperCompileManager.compileReport(reportSrcFile);
