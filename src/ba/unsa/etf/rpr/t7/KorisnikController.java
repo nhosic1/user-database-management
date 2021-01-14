@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
 
 import java.io.File;
+import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
@@ -136,7 +137,8 @@ public class KorisnikController {
     }
     public void about(ActionEvent actionEvent) throws Exception{
         Stage newStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/about.fxml"));
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/about.fxml"), bundle);
         newStage.setTitle("About");
         newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         newStage.show();

@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml" alignment="CENTER" spacing="10">
+<VBox alignment="CENTER" spacing="10"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml">
     <padding>
-        <Insets top="10" bottom="10" right="10" left="10"/>
+        <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
-    <Label text="Zadaća 4"/>
-    <Label text="Autor: Nedim Hošić"/>
-    <Label text="github repozitorij: https://github.com/RPR-2019/rpr20-zadaca4-nhosic1"/>
+    <Label text="%zadaca" />
+    <Label text="%autor" />
+    <Label text="%github" />
     <ImageView fitWidth="430" fitHeight="230">
         <Image url="/img/slika2.png"/>
     </ImageView>
