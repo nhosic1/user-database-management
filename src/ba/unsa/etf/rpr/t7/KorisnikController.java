@@ -141,7 +141,11 @@ public class KorisnikController {
         Stage newStage = new Stage();
         ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/about.fxml"), bundle);
-        newStage.setTitle("About");
+        if(Locale.getDefault().getLanguage().equals("bs")){
+            newStage.setTitle("O aplikaciji");
+        }else {
+            newStage.setTitle("About");
+        }
         newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         newStage.show();
     }
