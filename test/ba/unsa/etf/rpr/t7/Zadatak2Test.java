@@ -16,6 +16,7 @@ import org.testfx.framework.junit5.ApplicationExtension;
 import org.testfx.framework.junit5.Start;
 
 import java.io.File;
+import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -28,8 +29,8 @@ public class Zadatak2Test {
     public void start (Stage stage) throws Exception {
         model = new KorisniciModel();
         KorisnikController ctrl = new KorisnikController(model);
-
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"));
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
         loader.setController(ctrl);
         Parent root = loader.load();
         stage.setTitle("Korisnici");
