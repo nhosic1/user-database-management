@@ -12,8 +12,8 @@
             <MenuItem onAction="#save" text="_Save" />
             <MenuItem onAction="#print" text="_Print" />
             <Menu text="_Language">
-               <MenuItem text="_Bosanski" />
-               <MenuItem text="_English" />
+               <MenuItem text="_Bosanski" onAction="#bosanski"/>
+               <MenuItem text="_English" onAction="#engleski"/>
             </Menu>
             <MenuItem onAction="#exit" text="E_xit" />
          </Menu>

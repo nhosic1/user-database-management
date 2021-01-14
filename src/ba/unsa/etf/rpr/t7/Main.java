@@ -25,7 +25,7 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
         loader.setController(ctrl);
         Parent root = loader.load();
-        primaryStage.setTitle("Korisnici");
+        primaryStage.setTitle("Users");
         primaryStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         primaryStage.show();
         //primaryStage.setResizable(false);

@@ -13,6 +13,8 @@ import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
 
 import java.io.File;
+import java.io.IOException;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
@@ -156,6 +158,34 @@ public class KorisnikController {
             new PrintReport().showReport(model.getConn());
         } catch (JRException e1) {
             e1.printStackTrace();
+        }
+    }
+    public void bosanski(ActionEvent actionEvent){
+        Locale.setDefault(new Locale("bs"));
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
+        loader.setController(this);
+        Scene scene = fldIme.getScene();
+        Stage stage = (Stage)scene.getWindow();
+        stage.setTitle("Korisnici");
+        try {
+            scene.setRoot(loader.load());
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+    }
+    public void engleski(ActionEvent actionEvent){
+        Locale.setDefault(new Locale("en", "US"));
+        ResourceBundle bundle = ResourceBundle.getBundle("Translation");
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
+        loader.setController(this);
+        Scene scene = fldIme.getScene();
+        Stage stage = (Stage)scene.getWindow();
+        stage.setTitle("Users");
+        try {
+            scene.setRoot(loader.load());
+        } catch (IOException e){
+            e.printStackTrace();
         }
     }
 }
