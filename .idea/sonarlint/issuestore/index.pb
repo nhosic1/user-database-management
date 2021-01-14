@@ -27,7 +27,5 @@ W
 'src/ba/unsa/etf/rpr/t7/PrintReport.java,f/5/f5c2e8449b189a76651b7d63036187e9d48a0445
 d
 4out/production/rpr20-zadaca4/reports/korisnici.jrxml,d/9/d94d1c7e87e1ff9d5d178fea5f3c99173c4dcdfb
-Q
-!resources/reports/korisnici.jrxml,b/5/b51b009a181aef37eb9caea54e49445fb659cbc8
 m
 =.idea/libraries/net_sf_jasperreports_jasperreports_6_12_0.xml,b/8/b8aa46ac5895fd2551d80fd5cbd4b4fa4403a392

@@ -148,7 +148,11 @@ public class KorisnikController {
     public void save(ActionEvent actionEvent) throws Exception{
         File file;
         FileChooser chooser = new FileChooser();
-        chooser.setTitle("Save");
+        if(Locale.getDefault().getLanguage().equals("bs")){
+            chooser.setTitle("Sačuvaj");
+        }else {
+            chooser.setTitle("Save");
+        }
         Stage stage = (Stage) fldIme.getScene().getWindow();
         file = chooser.showOpenDialog(stage);
         model.zapisiDatoteku(file);

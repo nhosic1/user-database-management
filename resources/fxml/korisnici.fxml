@@ -8,17 +8,17 @@
 <BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <top>
       <MenuBar>
-         <Menu text="_File">
-            <MenuItem onAction="#save" text="_Save" />
-            <MenuItem onAction="#print" text="_Print" />
-            <Menu text="_Language">
+         <Menu text="%file">
+            <MenuItem onAction="#save" text="%save" />
+            <MenuItem onAction="#print" text="%print" />
+            <Menu text="%jezik">
                <MenuItem text="_Bosanski" onAction="#bosanski"/>
                <MenuItem text="_English" onAction="#engleski"/>
             </Menu>
-            <MenuItem onAction="#exit" text="E_xit" />
+            <MenuItem onAction="#exit" text="%exit" />
          </Menu>
-         <Menu text="_Help">
-            <MenuItem onAction="#about" text="_About" />
+         <Menu text="%help">
+            <MenuItem onAction="#about" text="%about" />
          </Menu>
       </MenuBar>
    </top>
