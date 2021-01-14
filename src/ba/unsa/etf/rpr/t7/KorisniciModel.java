@@ -132,6 +132,9 @@ public class KorisniciModel {
     public void setTrenutniKorisnik(int i) {
         this.trenutniKorisnik.set(korisnici.get(i));
     }
+    public void resetTrenutniKorisnik(){
+        this.trenutniKorisnik = new SimpleObjectProperty<>();
+    }
 
     public void izmijeniKorisnika(Korisnik k){
         try{

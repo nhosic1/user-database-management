@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.t7;
 
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -172,7 +173,9 @@ public class KorisnikController {
         Locale.setDefault(new Locale("bs"));
         ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
-        loader.setController(this);
+        model.resetTrenutniKorisnik();
+        KorisnikController ctrl = new KorisnikController(model);
+        loader.setController(ctrl);
         Scene scene = fldIme.getScene();
         Stage stage = (Stage)scene.getWindow();
         stage.setTitle("Korisnici");
@@ -186,7 +189,9 @@ public class KorisnikController {
         Locale.setDefault(new Locale("en", "US"));
         ResourceBundle bundle = ResourceBundle.getBundle("Translation");
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/korisnici.fxml"), bundle);
-        loader.setController(this);
+        model.resetTrenutniKorisnik();
+        KorisnikController ctrl = new KorisnikController(model);
+        loader.setController(ctrl);
         Scene scene = fldIme.getScene();
         Stage stage = (Stage)scene.getWindow();
         stage.setTitle("Users");
