@@ -26,7 +26,7 @@
             <TextField prefWidth="360"/>
             <Button text="Search"/>
             <Button text="Ok"/>
-            <Button text="Cancel"/>
+            <Button text="Cancel" onAction="#cancel"/>
         </HBox>
 
         <ScrollPane vbarPolicy="ALWAYS" hbarPolicy="NEVER" maxHeight="Infinity" GridPane.rowIndex="1"/>
