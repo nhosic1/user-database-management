@@ -205,7 +205,7 @@ public class KorisnikController {
     public void imgAction(ActionEvent actionEvent) throws IOException {
         Stage newStage = new Stage();
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/pretraga.fxml"));
-        newStage.setTitle("Pretraga");
+        newStage.setTitle("Pretraga slike");
         newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
         newStage.show();
     }

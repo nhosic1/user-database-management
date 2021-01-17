@@ -43,3 +43,7 @@ i
 9out/production/rpr20-zadaca4/Translation_en_US.properties,7/5/75563941e6ea024bb78ff2dd75c40a7da88c3f48
 c
 3out/production/rpr20-zadaca4/Translation.properties,9/d/9d8aed4b6a02362a7efc835522dfcbd32aae1d86
+_
+/out/production/rpr20-zadaca4/fxml/pretraga.fxml,6/5/65b3aae20bfe444a58d3c86c90811e5bd268380f
+^
+.src/ba/unsa/etf/rpr/t7/PretragaController.java,7/5/756f9de787281c52bda122a7707169c2c923dcc3

@@ -6,9 +6,29 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <GridPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="ba.unsa.etf.rpr.t7.PretragaController"
-            prefHeight="400.0" prefWidth="600.0">
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="ba.unsa.etf.rpr.t7.PretragaController" hgap="5" vgap="5">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints vgrow="NEVER"/>
+        <RowConstraints vgrow="ALWAYS"/>
+    </rowConstraints>
+
+    <padding>
+        <Insets top="5" bottom="5" right="5" left="5"/>
+    </padding>
+
+        <HBox alignment="CENTER_LEFT" spacing="5">
+            <TextField prefWidth="360"/>
+            <Button text="Search"/>
+            <Button text="Ok"/>
+            <Button text="Cancel"/>
+        </HBox>
+
+        <ScrollPane vbarPolicy="ALWAYS" hbarPolicy="NEVER" maxHeight="Infinity" GridPane.rowIndex="1"/>
 
 </GridPane>
