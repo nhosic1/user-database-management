@@ -48,7 +48,6 @@ public class KorisnikController {
             imageView.setImage(new Image(newKorisnik.getSlika()));
             listKorisnici.refresh();
          });
-        if(!listKorisnici.getItems().isEmpty()) listKorisnici.getSelectionModel().selectFirst();
 
         model.trenutniKorisnikProperty().addListener((obs, oldKorisnik, newKorisnik) -> {
             if (oldKorisnik != null) {
@@ -123,6 +122,8 @@ public class KorisnikController {
                 fldPassword.getStyleClass().add("poljeNijeIspravno");
             }
         });
+
+        if(!listKorisnici.getItems().isEmpty()) listKorisnici.getSelectionModel().selectFirst();
     }
 
     public void dodajAction(ActionEvent actionEvent) {
