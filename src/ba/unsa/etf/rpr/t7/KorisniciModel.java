@@ -31,10 +31,10 @@ public class KorisniciModel {
             }
         }
         try{
-            izmijeniKorisnika = conn.prepareStatement("UPDATE korisnik SET ime=?, prezime=?, email=?, username=?, password=? WHERE id=?");
+            izmijeniKorisnika = conn.prepareStatement("UPDATE korisnik SET ime=?, prezime=?, email=?, username=?, password=?, slika=? WHERE id=?");
             obrisiKorisnikaId = conn.prepareStatement("DELETE FROM korisnik WHERE id=?");
             dajNoviId = conn.prepareStatement("SELECT MAX(id)+1 FROM korisnik");
-            dodajKorisnika = conn.prepareStatement("INSERT INTO korisnik VALUES(?,?,?,?,?,?)");
+            dodajKorisnika = conn.prepareStatement("INSERT INTO korisnik VALUES(?,?,?,?,?,?,?)");
         } catch (SQLException e){
             e.printStackTrace();
         }
@@ -143,7 +143,8 @@ public class KorisniciModel {
             izmijeniKorisnika.setString(3, k.getEmail());
             izmijeniKorisnika.setString(4, k.getUsername());
             izmijeniKorisnika.setString(5, k.getPassword());
-            izmijeniKorisnika.setInt(6, k.getId());
+            izmijeniKorisnika.setString(6, k.getSlika());
+            izmijeniKorisnika.setInt(7, k.getId());
             izmijeniKorisnika.executeUpdate();
         } catch (SQLException e){
             e.printStackTrace();
@@ -165,6 +166,7 @@ public class KorisniciModel {
             dodajKorisnika.setString(4, k.getEmail());
             dodajKorisnika.setString(5, k.getUsername());
             dodajKorisnika.setString(6, k.getPassword());
+            dodajKorisnika.setString(7, k.getSlika());
             dodajKorisnika.executeUpdate();
         } catch (SQLException e){
             e.printStackTrace();
