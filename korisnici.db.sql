@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS "korisnik" (
 	"slika"  TEXT,
 	PRIMARY KEY("id")
 );
-INSERT INTO "korisnik" VALUES('1', 'Vedran', 'Ljubović', 'vljubovic@etf.unsa.ba', 'vedranlj', 'test', 'slika');
-INSERT INTO "korisnik" VALUES('2', 'Amra', 'Delić', 'adelic@etf.unsa.ba', 'amrad', 'test', 'slika');
-INSERT INTO "korisnik" VALUES('3', 'Tarik', 'Sijerčić', 'tsijercic@etf.unsa.ba', 'tariks', 'test', 'slika');
-INSERT INTO "korisnik" VALUES('4', 'Rijad', 'Fejzić', 'rfejzic@etf.unsa.ba', 'rijadf', 'test', 'slika');
+INSERT INTO "korisnik" VALUES('1', 'Vedran', 'Ljubović', 'vljubovic@etf.unsa.ba', 'vedranlj', 'test', '/img/face-smile.png');
+INSERT INTO "korisnik" VALUES('2', 'Amra', 'Delić', 'adelic@etf.unsa.ba', 'amrad', 'test', '/img/face-smile.png');
+INSERT INTO "korisnik" VALUES('3', 'Tarik', 'Sijerčić', 'tsijercic@etf.unsa.ba', 'tariks', 'test', '/img/face-smile.png');
+INSERT INTO "korisnik" VALUES('4', 'Rijad', 'Fejzić', 'rfejzic@etf.unsa.ba', 'rijadf', 'test', '/img/face-smile.png');
 COMMIT;
