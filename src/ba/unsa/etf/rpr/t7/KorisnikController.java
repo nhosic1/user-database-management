@@ -6,9 +6,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ListView;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
@@ -28,6 +31,7 @@ public class KorisnikController {
     public TextField fldUsername;
     public ListView<Korisnik> listKorisnici;
     public PasswordField fldPassword;
+    public ImageView imageView;
 
     private KorisniciModel model;
 
@@ -41,8 +45,10 @@ public class KorisnikController {
         listKorisnici.getSelectionModel().selectedItemProperty().addListener((obs, oldKorisnik, newKorisnik) -> {
             if(oldKorisnik != null) model.izmijeniKorisnika(oldKorisnik);
             model.setTrenutniKorisnik(newKorisnik);
+            imageView.setImage(new Image(newKorisnik.getSlika()));
             listKorisnici.refresh();
          });
+        if(!listKorisnici.getItems().isEmpty()) listKorisnici.getSelectionModel().selectFirst();
 
         model.trenutniKorisnikProperty().addListener((obs, oldKorisnik, newKorisnik) -> {
             if (oldKorisnik != null) {
@@ -203,10 +209,28 @@ public class KorisnikController {
         }
     }
     public void imgAction(ActionEvent actionEvent) throws IOException {
-        Stage newStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/pretraga.fxml"));
-        newStage.setTitle("Pretraga slike");
-        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
-        newStage.show();
+        if (!listKorisnici.getSelectionModel().isEmpty()) {
+            Stage newStage = new Stage();
+            PretragaController controller = new PretragaController();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/pretraga.fxml"));
+            loader.setController(controller);
+            Parent root = loader.load();
+            newStage.setTitle("Pretraga slike");
+            newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+            newStage.show();
+            newStage.setOnHiding(event -> {
+                if (controller.isSlikaOdabrana()) {
+                    imageView.setImage(new Image(controller.getLinkIzabraneSlike()));
+                    model.getTrenutniKorisnik().setSlika(controller.getLinkIzabraneSlike());
+                    model.izmijeniKorisnika(model.getTrenutniKorisnik());
+                }
+            });
+        } else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Nije izabran korisnik");
+            alert.setHeaderText("Niste izabrali korisnika kojeg želite");
+            alert.setContentText("Izaberite korisnika ili dodajte novog");
+            alert.show();
+        }
     }
 }

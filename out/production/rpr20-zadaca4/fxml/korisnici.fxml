@@ -47,9 +47,7 @@
             <ListView fx:id="listKorisnici" prefHeight="100.0" prefWidth="200.0" GridPane.rowSpan="6" />
             <Button fx:id="imgKorisnik" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.columnSpan="2" onAction="#imgAction">
                <graphic>
-                  <ImageView fitWidth="128" fitHeight="128">
-                     <Image url="/img/face-smile.png"/>
-                  </ImageView>
+                  <ImageView fx:id="imageView" fitWidth="128" fitHeight="128"/>
                </graphic>
             </Button>
             <Label text="%ime" GridPane.columnIndex="1" GridPane.rowIndex="1" />

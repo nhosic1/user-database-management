@@ -3,6 +3,7 @@ package ba.unsa.etf.rpr.t7;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.scene.Node;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -22,11 +23,38 @@ import java.nio.charset.StandardCharsets;
 public class PretragaController {
     public TextField fldPretraga;
     public TilePane tilePane;
+    private boolean slikaOdabrana = false;
+    private String linkIzabraneSlike;
+
+    public boolean isSlikaOdabrana() {
+        return slikaOdabrana;
+    }
+
+    public PretragaController() {
+    }
+
+    public String getLinkIzabraneSlike() {
+        return linkIzabraneSlike;
+    }
 
     public void cancel(ActionEvent actionEvent) {
+        slikaOdabrana = false;
         Node node = (Node)actionEvent.getSource();
         Stage stage = (Stage)node.getScene().getWindow();
         stage.close();
+    }
+    public void ok(ActionEvent actionEvent){
+        if(slikaOdabrana){
+            Node node = (Node)actionEvent.getSource();
+            Stage stage = (Stage)node.getScene().getWindow();
+            stage.close();
+        } else{
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Nijedna slika nije izabrana");
+            alert.setHeaderText("Niste izabrali sliku koju želite");
+            alert.setContentText("Unesite pretragu, a zatim izaberite sliku");
+            alert.show();
+        }
     }
 
     public void search(ActionEvent actionEvent) {
@@ -63,8 +91,13 @@ public class PretragaController {
                     ImageView view = new ImageView(new Image(link));
                     view.setFitHeight(128);
                     view.setFitWidth(128);
+                    b.setGraphic(view);
+                    b.setOnAction(click -> {
+                        slikaOdabrana = true;
+                        ImageView view1 = (ImageView)b.getGraphic();
+                        linkIzabraneSlike = view1.getImage().getUrl();
+                    });
                     Platform.runLater(() -> {
-                        b.setGraphic(view);
                         tilePane.getChildren().add(0, b);
                     });
                 }
