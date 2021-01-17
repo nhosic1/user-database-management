@@ -15,6 +15,7 @@ import net.sf.jasperreports.engine.JRException;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
@@ -201,7 +202,11 @@ public class KorisnikController {
             e.printStackTrace();
         }
     }
-    public void imgAction(ActionEvent actionEvent){
-
+    public void imgAction(ActionEvent actionEvent) throws IOException {
+        Stage newStage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/pretraga.fxml"));
+        newStage.setTitle("Pretraga");
+        newStage.setScene(new Scene(root, USE_COMPUTED_SIZE, USE_COMPUTED_SIZE));
+        newStage.show();
     }
 }

@@ -77,7 +77,7 @@ public class KorisniciModel {
         try {
             ResultSet rs = dajKorisnike.executeQuery();
             while (rs.next()) {
-                Korisnik k = new Korisnik(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6));
+                Korisnik k = new Korisnik(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7));
                 korisnici.add(k);
                 if (trenutniKorisnik == null) trenutniKorisnik = new SimpleObjectProperty<>(k);
             }
