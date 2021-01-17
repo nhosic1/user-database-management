@@ -23,12 +23,12 @@
     </padding>
 
         <HBox alignment="CENTER_LEFT" spacing="5">
-            <TextField prefWidth="360"/>
-            <Button text="Search"/>
+            <TextField fx:id="fldPretraga" prefWidth="360"/>
+            <Button text="Search" onAction="#search"/>
             <Button text="Ok"/>
             <Button text="Cancel" onAction="#cancel"/>
         </HBox>
 
-        <ScrollPane vbarPolicy="ALWAYS" hbarPolicy="NEVER" maxHeight="Infinity" GridPane.rowIndex="1"/>
+        <ScrollPane fx:id="scrollPane" hbarPolicy="NEVER" maxHeight="Infinity" GridPane.rowIndex="1"/>
 
 </GridPane>
