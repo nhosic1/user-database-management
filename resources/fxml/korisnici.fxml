@@ -12,8 +12,8 @@
             <MenuItem onAction="#save" text="%save" />
             <MenuItem onAction="#print" text="%print" />
             <Menu text="%jezik">
-               <MenuItem text="_Bosanski" onAction="#bosanski"/>
-               <MenuItem text="_English" onAction="#engleski"/>
+               <MenuItem onAction="#bosanski" text="_Bosanski" />
+               <MenuItem onAction="#engleski" text="_English" />
             </Menu>
             <MenuItem onAction="#exit" text="%exit" />
          </Menu>
@@ -39,20 +39,22 @@
             <RowConstraints />
             <RowConstraints />
             <RowConstraints />
+            <RowConstraints />
          </rowConstraints>
          <children>
-            <ListView fx:id="listKorisnici" prefHeight="100.0" prefWidth="200.0" GridPane.rowSpan="5" />
-            <Label text="%ime" GridPane.columnIndex="1" />
-            <TextField fx:id="fldIme" GridPane.columnIndex="2" />
-            <Label text="%prezime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="fldPrezime" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="E-mail:" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="fldEmail" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label text="%korisnicko" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="fldUsername" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label text="%lozinka" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <PasswordField fx:id="fldPassword" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="5">
+            <ListView fx:id="listKorisnici" prefHeight="100.0" prefWidth="200.0" GridPane.rowSpan="6" />
+            <Button fx:id="imgKorisnik" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+            <Label text="%ime" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="fldIme" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="%prezime" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="fldPrezime" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="E-mail:" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="fldEmail" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="%korisnicko" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="fldUsername" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="%lozinka" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <PasswordField fx:id="fldPassword" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <ButtonBar prefHeight="40.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="6">
                <buttons>
                   <Button fx:id="btnObrisi" mnemonicParsing="false" onAction="#obrisiAction" text="%obrisi" />
                   <Button fx:id="btnDodaj" mnemonicParsing="false" onAction="#dodajAction" text="%dodaj" />

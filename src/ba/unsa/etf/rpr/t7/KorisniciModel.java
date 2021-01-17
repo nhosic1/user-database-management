@@ -21,11 +21,11 @@ public class KorisniciModel {
             e.printStackTrace();
         }
         try{
-           dajKorisnike = conn.prepareStatement("SELECT * FROM korisnik");
+           dajKorisnike = conn.prepareStatement("SELECT id, ime, prezime, email, username, password, slika FROM korisnik");
         } catch (SQLException e){
             regenerisiBazu();
             try{
-                dajKorisnike = conn.prepareStatement("SELECT * FROM korisnik");
+                dajKorisnike = conn.prepareStatement("SELECT id, ime, prezime, email, username, password, slika FROM korisnik");
             } catch (SQLException e1){
                 e1.printStackTrace();
             }
