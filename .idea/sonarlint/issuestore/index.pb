@@ -31,8 +31,6 @@ m
 =.idea/libraries/net_sf_jasperreports_jasperreports_6_12_0.xml,b/8/b8aa46ac5895fd2551d80fd5cbd4b4fa4403a392
 \
 ,out/production/rpr20-zadaca4/fxml/about.fxml,f/5/f50c972449f79edaaf5c04413ac71caa5d47883f
-I
-resources/fxml/about.fxml,d/5/d59141e7f9bca26d3335ee3cc0e74f97534161bc
 Y
 )test/ba/unsa/etf/rpr/t7/KorisnikTest.java,5/7/57d37570b8518966cc429261faceef74bac72b3f
 _
