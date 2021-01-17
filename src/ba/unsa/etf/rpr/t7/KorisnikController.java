@@ -201,4 +201,7 @@ public class KorisnikController {
             e.printStackTrace();
         }
     }
+    public void imgAction(ActionEvent actionEvent){
+
+    }
 }
