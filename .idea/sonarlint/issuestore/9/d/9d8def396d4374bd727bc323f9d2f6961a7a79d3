@@ -1,49 +1,51 @@
 
-l
-java:S1104"VMake fldPrezime a static final constant or non-public and provide accessors if needed.(¬Ğ¡§
-j
-java:S1104"TMake fldEmail a static final constant or non-public and provide accessors if needed.(ÙœÜ¤
-P
-java:S1172"2Remove this unused method parameter "actionEvent".(ªåº³8ĞØ”ğ.
-j
-java:S1192"LDefine a constant instead of duplicating this literal "Translation" 3 times.(“òáĞ8ËÔ¼˜ğ.
-O
-java:S1172z"2Remove this unused method parameter "actionEvent".(Š÷£8ĞØ”ğ.
-U
-java:S1172¦"2Remove this unused method parameter "actionEvent".(ÉÂğ‹øÿÿÿÿ8ÿĞ®—ğ.
-P
-java:S1172½"2Remove this unused method parameter "actionEvent".(ƒ­ñÈ8ışÑ—ğ.
-h
-java:S1104"RMake fldIme a static final constant or non-public and provide accessors if needed.(ŠºÁ¾
-P
-java:S1172š"2Remove this unused method parameter "actionEvent".(éæ¥–8ÿĞ®—ğ.
-Š
-java:S1130š"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(éæ¥–8ÿĞ®—ğ.
-U
-java:S1172‹"2Remove this unused method parameter "actionEvent".(ˆ÷‰àøÿÿÿÿ8ĞØ”ğ.
-n
-java:S1192I"SDefine a constant instead of duplicating this literal "poljeNijeIspravno" 10 times.(¬ÄÔûÿÿÿÿ
-l
-java:S1192J"ODefine a constant instead of duplicating this literal "poljeIspravno" 10 times.(‹’úŞ8ĞØ”ğ.
-c	java:S112š"FDefine and throw a dedicated exception instead of using a generic one.(éæ¥–8ÿĞ®—ğ.
-O
-java:S1172Í"2Remove this unused method parameter "actionEvent".(áĞÒ#8Şîñ.
-s
-java:S1104"WMake fldPassword a static final constant or non-public and provide accessors if needed.(¾¢È8ĞØ”ğ.
 d
 java:S1128"GRemove this unused import 'javafx.beans.property.SimpleObjectProperty'.(¶Ö­¤8©¦Í˜ğ.
-O
-java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8òœ³ñ.
 P
-java:S1172„"2Remove this unused method parameter "actionEvent".(—¼‘8ĞØ”ğ.
-U
-java:S1172"2Remove this unused method parameter "actionEvent".(—Í´ıÿÿÿÿ8ĞØ”ğ.
-t
-java:S3776'"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(·òşÿÿÿÿ8ĞØ”ğ.
-h	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(—Í´ıÿÿÿÿ8ĞØ”ğ.
-t
-java:S1104"YMake listKorisnici a static final constant or non-public and provide accessors if needed.(ç²ğÌùÿÿÿÿ
+java:S1172ˆ"2Remove this unused method parameter "actionEvent".(ªåº³8ßÛ””ñ.
+j
+java:S1104"TMake fldEmail a static final constant or non-public and provide accessors if needed.(ÙœÜ¤
+h
+java:S1104"RMake fldIme a static final constant or non-public and provide accessors if needed.(ŠºÁ¾
 m
-java:S1104"WMake fldUsername a static final constant or non-public and provide accessors if needed.(ïÀø°
+java:S1104"WMake fldUsername a static final constant or non-public and provide accessors if needed.(ïÀø°
 U
-java:S1172­"2Remove this unused method parameter "actionEvent".(õª¢Åùÿÿÿÿ8ÿĞ®—ğ.
+java:S1172•"2Remove this unused method parameter "actionEvent".(—Í´ıÿÿÿÿ8ßÛ””ñ.
+n
+java:S1192N"SDefine a constant instead of duplicating this literal "poljeNijeIspravno" 10 times.(¬ÄÔûÿÿÿÿ
+j
+java:S1192—"LDefine a constant instead of duplicating this literal "Translation" 3 times.(“òáĞ8ßÛ””ñ.
+U
+java:S1172´"2Remove this unused method parameter "actionEvent".(õª¢Åùÿÿÿÿ8ßÛ””ñ.
+U
+java:S1172’"2Remove this unused method parameter "actionEvent".(ˆ÷‰àøÿÿÿÿ8ßÛ””ñ.
+P
+java:S1172"2Remove this unused method parameter "actionEvent".(Š÷£8ßÛ””ñ.
+P
+java:S1172‹"2Remove this unused method parameter "actionEvent".(—¼‘8ßÛ””ñ.
+h	java:S112•"FDefine and throw a dedicated exception instead of using a generic one.(—Í´ıÿÿÿÿ8ßÛ””ñ.
+P
+java:S1172¡"2Remove this unused method parameter "actionEvent".(éæ¥–8ßÛ””ñ.
+l
+java:S1104"VMake fldPrezime a static final constant or non-public and provide accessors if needed.(¬Ğ¡§
+t
+java:S3776+"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(·òşÿÿÿÿ8ĞØ”ğ.
+s
+java:S1104!"WMake fldPassword a static final constant or non-public and provide accessors if needed.(¾¢È8ĞØ”ğ.
+P
+java:S1172Ä"2Remove this unused method parameter "actionEvent".(ƒ­ñÈ8ßÛ””ñ.
+t
+java:S1104 "YMake listKorisnici a static final constant or non-public and provide accessors if needed.(ç²ğÌùÿÿÿÿ
+O
+java:S1172Ô"2Remove this unused method parameter "actionEvent".(áĞÒ#8ßÛ””ñ.
+U
+java:S1172­"2Remove this unused method parameter "actionEvent".(ÉÂğ‹øÿÿÿÿ8ßÛ””ñ.
+w
+java:S1104""UMake imageView a static final constant or non-public and provide accessors if needed.(…Çªúÿÿÿÿ8®³–“ñ.
+l
+java:S1192O"ODefine a constant instead of duplicating this literal "poljeIspravno" 10 times.(‹’úŞ8ßÛ””ñ.
+c	java:S112¡"FDefine and throw a dedicated exception instead of using a generic one.(éæ¥–8ßÛ””ñ.
+O
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8òœ³ñ.
+Š
+java:S1130¡"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(éæ¥–8ßÛ””ñ.

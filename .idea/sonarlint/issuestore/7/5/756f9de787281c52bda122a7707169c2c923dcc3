@@ -1,3 +1,20 @@
 
-]
-java:S2094"BRemove this empty class, write its code or make it an "interface".(ÄÛùüÿÿÿÿ
+U	java:S106n"9Replace this use of System.out or System.err by a logger.(¡Æ›8á¡¨ˆñ.
+Z	java:S106o"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8İ±æñ.
+9
+java:S1643O"Use a StringBuilder instead.(“ø8İ±æñ.
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(²‹Åí8á¡¨ˆñ.
+T
+java:S1172<"2Remove this unused method parameter "actionEvent".(Ô©™›ûÿÿÿÿ8÷´Ù‡ñ.
+Z	java:S106l"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8İ±æñ.
+y
+java:S1104"WMake fldPretraga a static final constant or non-public and provide accessors if needed.(ú¹›ÿùÿÿÿÿ8ÔÏË‡ñ.
+D
+java:S1659M""Declare "line" on a separate line.(ò®‚ıüÿÿÿÿ8İ±æñ.
+p
+java:S1104"TMake tilePane a static final constant or non-public and provide accessors if needed.(ˆ®58À‡÷‰ñ.
+U	java:S106i"9Replace this use of System.out or System.err by a logger.(ÓÁ—¢8İ±æñ.
+I
+java:S1602d",Remove useless curly braces around statement(ÃÉş©8—ŞÅ‘ñ.
+£
+java:S1186!"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ñ•‚ùÿÿÿÿ8‡ ’ñ.

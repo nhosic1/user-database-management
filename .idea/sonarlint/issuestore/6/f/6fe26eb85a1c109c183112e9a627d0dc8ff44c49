@@ -1,26 +1,26 @@
 
-[	java:S106Ë"9Replace this use of System.out or System.err by a logger.(¼‹Æòûÿÿÿÿ8ŸÑı³ï.
-H
-java:S1659",Declare "dodajKorisnika" on a separate line.(ä’Í8ËˆÂ—ğ.
-V	java:S106Â"9Replace this use of System.out or System.err by a logger.(´Š¹8ŸÑı³ï.
-N	java:S106U"9Replace this use of System.out or System.err by a logger.(×œ š
-Q	java:S125L"<This block of commented-out lines of code should be removed.(‚¼½ù
-K
-java:S1659"/Declare "obrisiKorisnikaId" on a separate line.(ä’Í8Ü˜ï.
-7
-java:S16431"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ
-P
-java:S11413"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
 b
-java:S2095_"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+java:S20954"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+[	java:S106Ë"9Replace this use of System.out or System.err by a logger.(¼‹Æòûÿÿÿÿ8ŸÑı³ï.
+V	java:S106Ì"9Replace this use of System.out or System.err by a logger.(¹ò¾ã8ŸÑı³ï.
 C
 java:S1659"'Declare "dajNoviId" on a separate line.(ä’Í8ËˆÂ—ğ.
-D
-java:S1659"/Declare "izmijeniKorisnika" on a separate line.(ä’Í
+Q	java:S125E"<This block of commented-out lines of code should be removed.(÷ñÇ¨
+V	java:S106Â"9Replace this use of System.out or System.err by a logger.(´Š¹8ŸÑı³ï.
 ?
 java:S2115")Add password protection to this database.(¶Ôõ
 N	java:S106>"9Replace this use of System.out or System.err by a logger.(Éé©ı
-Q	java:S125E"<This block of commented-out lines of code should be removed.(÷ñÇ¨
-V	java:S106Ì"9Replace this use of System.out or System.err by a logger.(¹ò¾ã8ŸÑı³ï.
+P
+java:S11413"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+K
+java:S1659"/Declare "obrisiKorisnikaId" on a separate line.(ä’Í8Ü˜ï.
+H
+java:S1659",Declare "dodajKorisnika" on a separate line.(ä’Í8ËˆÂ—ğ.
+D
+java:S1659"/Declare "izmijeniKorisnika" on a separate line.(ä’Í
+7
+java:S16431"Use a StringBuilder instead.(¥…ˆÇşÿÿÿÿ
+Q	java:S125L"<This block of commented-out lines of code should be removed.(‚¼½ù
+N	java:S106U"9Replace this use of System.out or System.err by a logger.(×œ š
 b
-java:S20954"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
+java:S2095_"GUse try-with-resources or close this "Statement" in a "finally" clause.(ìï‡Àûÿÿÿÿ
