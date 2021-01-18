@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.t7;
 
-import javafx.beans.property.SimpleObjectProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +17,6 @@ import net.sf.jasperreports.engine.JRException;
 
 import java.io.File;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
