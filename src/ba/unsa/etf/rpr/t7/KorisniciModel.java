@@ -66,13 +66,7 @@ public class KorisniciModel {
     public void napuni() {
         // Ako je lista već bila napunjena, praznimo je
         // Na taj način se metoda napuni() može pozivati više puta u testovima
-        /*korisnici.clear();
 
-        korisnici.add(new Korisnik("Vedran", "Ljubović", "vljubovic@etf.unsa.ba", "vedranlj", "test"));
-        korisnici.add(new Korisnik("Amra", "Delić", "adelic@etf.unsa.ba", "amrad", "test"));
-        korisnici.add(new Korisnik("Tarik", "Sijerčić", "tsijercic1@etf.unsa.ba", "tariks", "test"));
-        korisnici.add(new Korisnik("Rijad", "Fejzić", "rfejzic1@etf.unsa.ba", "rijadf", "test"));
-        trenutniKorisnik.set(null);*/
         korisnici.clear();
         try {
             ResultSet rs = dajKorisnike.executeQuery();

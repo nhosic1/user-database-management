@@ -43,7 +43,11 @@ public class KorisnikController {
         listKorisnici.getSelectionModel().selectedItemProperty().addListener((obs, oldKorisnik, newKorisnik) -> {
             if(oldKorisnik != null) model.izmijeniKorisnika(oldKorisnik);
             model.setTrenutniKorisnik(newKorisnik);
-            imageView.setImage(new Image(newKorisnik.getSlika()));
+            if(newKorisnik != null) {
+                imageView.setImage(new Image(newKorisnik.getSlika()));
+            } else{
+                imageView.setImage(null);
+            }
             listKorisnici.refresh();
          });
 
